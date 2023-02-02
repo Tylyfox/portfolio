@@ -249,6 +249,19 @@ body {
     cursor: pointer;
     color: #FFA101;   
 }
+.modal .content {
+    margin: 30px;
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin-right: auto ;
+    margin-left: auto;
+}
+.modal .content h1 {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
 .boxBackground{
     position: absolute;
     width: 100%;

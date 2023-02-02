@@ -50,6 +50,10 @@ for (let i = 0; i < submenu.length; i++) {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
     modal.style.display = ("flex");
+    for (let h = 0; h < submenu.length; h++) {
+      submenu[h].style.display = "none";
+    }
+    toggleProfil.style.display = "none";
   };
 }
 //closing of modals when click on span
@@ -57,7 +61,11 @@ for (let i = 0; i < span.length; i++) {
   span[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
-    modal.style.display = ("none")
+    modal.style.display = ("none");
+    for (let h = 0; h < submenu.length; h++) {
+      submenu[h].style.display = "block";
+    }
+    toggleProfil.style.display = "flex";
   };
 }
 //closing of modals when type escape with keyboard 
@@ -66,7 +74,11 @@ window.onkeydown = function (event) {
     event.preventDefault;
     let modal = document.querySelectorAll(".modal");
     for (let i = 0; i < modal.length; i++) {
-      modal[i].style.display = ("none")
+      modal[i].style.display = ("none");
+    }
+    for (let h = 0; h < submenu.length; h++) {
+      submenu[h].style.display = "block";
     }
   }
+  toggleProfil.style.display = "flex";
 };
