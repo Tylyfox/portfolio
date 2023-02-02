@@ -1,7 +1,8 @@
 const profilImg = document.querySelector("#profilImg");
 const toggleProfil = document.querySelector(".toggleProfil");
 const menu = document.querySelector(".menu");
-const textAnim = document.querySelector("p");
+const textAnim1 = document.querySelector("#p1");
+const textAnim2 = document.querySelector("#p2");
 const submenu = document.querySelectorAll(".submenu");
 const span = document.querySelectorAll("span");
 
@@ -11,25 +12,33 @@ profilImg.onclick = function () {
 };
 profilImg.addEventListener("mouseover", function (event) {
   event.target.src = "./img/profil2.png";
-  new Typewriter(textAnim, {
+  new Typewriter(textAnim1, {
     deleteSpeed: 10,
   })
     .changeDelay(60)
     .typeString("Salut! Moi, c'est Valentin!")
-    .pauseFor(500)
+    .pauseFor(1600)
     .deleteChars(27)
-    .changeDelay(60)
-    .typeString("Bienvenue à toi!")
-    .pauseFor(500)
-    .deleteChars(16)
     .changeDelay(60)
     .typeString("Tu souhaites me découvrir?")
     .pauseFor(500)
-    .changeDelay(60)
-    .deleteChars(26)
-    .typeString("Cliques sur ma <strong> tête! </strong>")
     .start();
+
+    new Typewriter(textAnim2, {
+      deleteSpeed: 10,
+    })
+      .pauseFor(1500)
+      .changeDelay(60)
+      .typeString("Bienvenue à toi!")
+      .pauseFor(500)
+      .deleteChars(16)
+      .pauseFor(2000)
+      .changeDelay(60)
+      .typeString("Cliques sur ma <strong> tête!</strong>")
+      .start();
 });
+
+
 profilImg.addEventListener("mouseout", function (event) {
   event.target.src = "./img/profil1.png";
 });

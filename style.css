@@ -263,6 +263,7 @@ body {
 .boxBackground div:nth-child(2) {
     top: 70%;
     left: 50%;
+    border: 6px solid #B3DEE5;
     animation: boxAnimate 12s linear infinite;
 }
 .boxBackground div:nth-child(3) {
@@ -273,6 +274,7 @@ body {
 .boxBackground div:nth-child(4) {
     top: 20%;
     left: 60%;
+    border: 6px solid #B3DEE5;
     animation: boxAnimate 10s linear infinite;
 }
 .boxBackground div:nth-child(5) {
@@ -283,6 +285,7 @@ body {
 .boxBackground div:nth-child(6) {
     top: 80%;
     left: 30%;
+    border: 6px solid #B3DEE5;
     animation: boxAnimate 6s linear infinite;
 }
 .boxBackground div:nth-child(7) {
@@ -293,6 +296,7 @@ body {
 .boxBackground div:nth-child(8) {
     top: 32%;
     left: 25%;
+    border: 6px solid #B3DEE5;
     animation: boxAnimate 10s linear infinite;
 }
 .boxBackground div:nth-child(9) {
@@ -303,6 +307,7 @@ body {
 .boxBackground div:nth-child(10) {
     top: 20%;
     left: 80%;
+    border: 6px solid #B3DEE5;
     animation: boxAnimate 5s linear infinite;
 }
 @keyframes boxAnimate {
