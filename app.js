@@ -49,7 +49,7 @@ for (let i = 0; i < submenu.length; i++) {
   submenu[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
-    modal.classList.toggle("modal");
+    modal.style.display = ("flex");
   };
 }
 //closing of modals when click on span
@@ -57,7 +57,7 @@ for (let i = 0; i < span.length; i++) {
   span[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
-    modal.classList.toggle("modal");
+    modal.style.display = ("none")
   };
 }
 //closing of modals when type escape with keyboard 
@@ -66,7 +66,7 @@ window.onkeydown = function (event) {
     event.preventDefault;
     let modal = document.querySelectorAll(".modal");
     for (let i = 0; i < modal.length; i++) {
-      modal[i].classList.toggle("modal");
+      modal[i].style.display = ("none")
     }
   }
 };

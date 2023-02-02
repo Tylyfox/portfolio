@@ -143,6 +143,7 @@ body {
     cursor: pointer;
     transition-delay: calc(0.2s * var(--i));
     opacity: 0;
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.3);
 }
 .menu .submenu::before {
     content: '';
@@ -160,6 +161,7 @@ body {
     transparent);
     animation: animate 7s linear infinite;
     transition: 0.5s;
+
 }
 .menu .submenu::after {
     content: "";
@@ -176,7 +178,7 @@ body {
     cursor: pointer;
 }
 .menu .submenu img {
-    transform: rotate(calc(360deg / -5 * var(--i)));
+    transform: rotate(calc(360deg / -5 * var(--i))) scale(0.8);
     transition: 0.5s;
     position: absolute;
     top: 8px;
@@ -185,6 +187,11 @@ body {
     z-index: 1;
     width: calc(100% - 15px);
     height: calc(100% - 15px);
+    filter: grayscale(80%);
+}
+.menu .submenu:hover img {
+    filter: grayscale(0);
+    transform:  rotate(calc(360deg / -5 * var(--i))) scale(1) ;
 }
 .menu .modal {
     position: fixed;
@@ -194,7 +201,7 @@ body {
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
@@ -218,12 +225,13 @@ body {
         height: 90%;
     }
 }
-.modal .content {
+
+.menu .modal .container {
     position: relative;
     width: 100%;
     height: 100%;
 }
-.modal .content span {
+ .modal .container span {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -232,12 +240,12 @@ body {
     width: 40px;
     height: 40px;
     margin: 2px;
-    color: #fff;
+    color: #B3DEE5;
     font-weight: 900;
     font-size: 2em;
     transition: 0.5s;
 }
-.modal .content span:hover {
+ .modal .container span:hover {
     cursor: pointer;
     color: #FFA101;   
 }
@@ -307,6 +315,12 @@ body {
 .boxBackground div:nth-child(10) {
     top: 20%;
     left: 80%;
+    border: 6px solid #B3DEE5;
+    animation: boxAnimate 5s linear infinite;
+}
+.boxBackground div:nth-child(11) {
+    top: 86%;
+    left: 86%;
     border: 6px solid #B3DEE5;
     animation: boxAnimate 5s linear infinite;
 }
