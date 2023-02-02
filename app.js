@@ -51,7 +51,7 @@ for (let i = 0; i < span.length; i++) {
     modal.classList.toggle("modal");
   };
 }
-//closing of modals when type on keyboard esc
+//closing of modals when type escape with keyboard 
 window.onkeydown = function (event) {
   if (event.keyCode == 27) {
     event.preventDefault;

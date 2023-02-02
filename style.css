@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #31525B;
+    background-color:  #31525B;
     min-height: 100vh;
 }
 .bulle {
@@ -240,4 +240,78 @@ body {
 .modal .content span:hover {
     cursor: pointer;
     color: #FFA101;   
+}
+.boxBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.boxBackground div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid #FFA101;
+    border-radius: 20px;
+}
+.boxBackground div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: boxAnimate 10s linear infinite;
+}
+.boxBackground div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: boxAnimate 12s linear infinite;
+}
+.boxBackground div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: boxAnimate 9s linear infinite;
+}
+.boxBackground div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: boxAnimate 10s linear infinite;
+}
+.boxBackground div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: boxAnimate 6s linear infinite;
+}
+.boxBackground div:nth-child(6) {
+    top: 80%;
+    left: 30%;
+    animation: boxAnimate 6s linear infinite;
+}
+.boxBackground div:nth-child(7) {
+    top: 50%;
+    left: 80%;
+    animation: boxAnimate 12s linear infinite;
+}
+.boxBackground div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: boxAnimate 10s linear infinite;
+}
+.boxBackground div:nth-child(9) {
+    top: 80%;
+    left: 70%;
+    animation: boxAnimate 7s linear infinite;
+}
+.boxBackground div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: boxAnimate 5s linear infinite;
+}
+@keyframes boxAnimate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
 }
