@@ -24,20 +24,19 @@ profilImg.addEventListener("mouseover", function (event) {
     .pauseFor(500)
     .start();
 
-    new Typewriter(textAnim2, {
-      deleteSpeed: 10,
-    })
-      .pauseFor(1500)
-      .changeDelay(60)
-      .typeString("Bienvenue à toi!")
-      .pauseFor(500)
-      .deleteChars(16)
-      .pauseFor(2000)
-      .changeDelay(60)
-      .typeString("Cliques sur ma <strong> tête!</strong>")
-      .start();
+  new Typewriter(textAnim2, {
+    deleteSpeed: 10,
+  })
+    .pauseFor(1500)
+    .changeDelay(60)
+    .typeString("Bienvenue à toi!")
+    .pauseFor(500)
+    .deleteChars(16)
+    .pauseFor(2000)
+    .changeDelay(60)
+    .typeString("Cliques sur ma <strong> tête!</strong>")
+    .start();
 });
-
 
 profilImg.addEventListener("mouseout", function (event) {
   event.target.src = "./img/profil1.png";
@@ -49,7 +48,7 @@ for (let i = 0; i < submenu.length; i++) {
   submenu[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
-    modal.style.display = ("flex");
+    modal.style.display = "flex";
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "none";
     }
@@ -61,20 +60,20 @@ for (let i = 0; i < span.length; i++) {
   span[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
-    modal.style.display = ("none");
+    modal.style.display = "none";
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "block";
     }
     toggleProfil.style.display = "flex";
   };
 }
-//closing of modals when type escape with keyboard 
+//closing of modals when type escape with keyboard
 window.onkeydown = function (event) {
   if (event.keyCode == 27) {
     event.preventDefault;
     let modal = document.querySelectorAll(".modal");
     for (let i = 0; i < modal.length; i++) {
-      modal[i].style.display = ("none");
+      modal[i].style.display = "none";
     }
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "block";

@@ -336,6 +336,48 @@ body {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
 }
+.menu .submenu span {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  text-align: center;
+  opacity: 0;
+  color: #b3dee5;
+  transition: 0.5s;
+}
+.menu .submenu:hover span {
+    opacity: 1;
+    transform: translateY(-80px);
+    color: #ffa101;
+}
+.menu .submenu #span2 {
+    transform: rotate(-72deg) translateX(-50px);
+}
+.menu .submenu:hover #span2 {
+    transform: translateX(140px) translateY(100px) rotate(-72deg);
+}
+.menu .submenu #span3 {
+    transform: rotate(-144deg) translateX(-32px);
+}
+.menu .submenu:hover #span3 {
+    transform: translateX(-80px) translateY(174px) rotate(-144deg);
+}
+.menu .submenu #span4 {
+    transform: rotate(-217deg) translateX(40px);
+}
+.menu .submenu:hover #span4 {
+    transform: translateX(88px) translateY(170px) rotate(-217deg);
+}
+.menu .submenu #span5 {
+    transform: rotate(72deg) translateX(56px);
+}
+.menu .submenu:hover #span5 {
+    transform: translateX(138px) translateY(16px) rotate(72deg);
+}
 .menu .submenu:hover img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -400,7 +442,6 @@ body {
     height: 90%;
   }
 }
-
 .menu .modal .container {
   position: relative;
   width: 100%;

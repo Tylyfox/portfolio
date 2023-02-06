@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <title>Portfolio / CV</title>
+  </head>
 
-<body>
+  <body>
     <div class="boxBackground">
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
     </div>
     <div class="menu">
-        <div class="toggleProfil bulle">
-            <div class="infoBulle">
-                <div class="infobulleContent">
-                    <p id="p1"></p>
-                    <p id="p2"></p>
-                </div>
-            </div>
-            <img id="profilImg" src="./img/profil1.png" alt="image de profil">
+      <div class="toggleProfil bulle">
+        <div class="infoBulle">
+          <div class="infobulleContent">
+            <p id="p1"></p>
+            <p id="p2"></p>
+          </div>
         </div>
-        <div class="submenu bulle" id="submenu1" style="--i:0;">
-            <img src="./img/virtual_graduation.png" alt="#">
+        <img id="profilImg" src="./img/profil1.png" alt="image de profil">
+      </div>
+      <div class="submenu bulle" id="submenu1" style="--i: 0">
+        <img src="./img/virtual_graduation.png" alt="#">
+        <span>Mes projets</span>
+      </div>
+      <div class="submenu bulle" id="submenu2" style="--i: 1">
+        <img src="./img/art_supplies.png" alt="#">
+        <span id="span2">Mes projets</span>
+      </div>
+      <div class="submenu bulle" id="submenu3" style="--i: 2">
+        <img src="./img/kid_picture.png" alt="#">
+        <span id="span3">Mes projets</span>
+      </div>
+      <div class="submenu bulle" id="submenu4" style="--i: 3">
+        <img src="./img/sticker(3).png" alt="#">
+        <span id="span4">Mes projets</span>
+      </div>
+      <div class="submenu bulle" id="submenu5" style="--i: 4">
+        <img src="./img/sticker(4).png" alt="#">
+        <span id="span5">Mes projets</span>
+      </div>
+      <div id="modal1" class="modal">
+        <div class="container">
+          <span id="span1"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></span>
+          <div class="content">
+            <h1>Ce que je recherche</h1>
+          </div>
         </div>
-        <div class="submenu bulle" id="submenu2" style="--i:1;">
-            <img src="./img/art_supplies.png" alt="#">
+      </div>
+      <div id="modal2" class="modal">
+        <div class="container">
+          <span id="span2"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></span>
         </div>
-        <div class="submenu bulle"id="submenu3" style="--i:2;">
-            <img src="./img/kid_picture.png" alt="#">
+      </div>
+      <div id="modal3" class="modal">
+        <div class="container">
+          <span id="span3"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></span>
         </div>
-        <div class="submenu bulle" id="submenu4" style="--i:3;">
-            <img src="./img/sticker(3).png" alt="#">
+      </div>
+      <div id="modal4" class="modal">
+        <div class="container">
+          <span id="span4"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></span>
         </div>
-        <div class="submenu bulle" id="submenu5" style="--i:4;">
-            <img src="./img/sticker(4).png" alt="#">
+      </div>
+      <div id="modal5" class="modal">
+        <div class="container">
+          <span id="span5"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></span>
         </div>
-        <div id="modal1" class="modal">
-            <div class="container">
-                <span id="span1"><ion-icon name="close-circle-outline"></ion-icon></span>
-                <div class="content">
-                <h1>Ce que je recherche</h1>
-                </div>
-            </div>
-        </div>
-        <div id="modal2" class="modal">
-            <div class="container">
-                <span id="span2"><ion-icon name="close-circle-outline"></ion-icon></span>
-            </div>
-        </div>
-        <div id="modal3"  class="modal">
-            <div class="container">
-                <span id="span3"><ion-icon name="close-circle-outline"></ion-icon></span>
-            </div>
-        </div>
-        <div id="modal4"  class="modal">
-            <div class="container">
-                <span id="span4"><ion-icon name="close-circle-outline"></ion-icon></span>
-            </div>
-        </div>
-        <div id="modal5"  class="modal">
-            <div class="container">
-                <span id="span5"><ion-icon name="close-circle-outline"></ion-icon></span>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
