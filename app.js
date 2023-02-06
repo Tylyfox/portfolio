@@ -4,8 +4,11 @@ const menu = document.querySelector(".menu");
 const textAnim1 = document.querySelector("#p1");
 const textAnim2 = document.querySelector("#p2");
 const submenu = document.querySelectorAll(".submenu");
-const span = document.querySelectorAll(".spanClose");
-console.log(span);
+const spanClose = document.querySelectorAll(".spanClose");
+const imgSubmenu = document.querySelectorAll(".imgSubmenu");
+const submenuTitle = document.querySelectorAll(".submenuTitle");
+
+
 profilImg.onclick = function () {
   menu.classList.toggle("active");
   profilImg.src = "./img/smiling.png";
@@ -49,6 +52,8 @@ for (let i = 0; i < submenu.length; i++) {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
     modal.style.display = "flex";
+    imgSubmenu[i].style.filter = "grayscale(0%)";
+    submenuTitle[i].style.color = "#b3dee5";
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "none";
     }
@@ -56,11 +61,12 @@ for (let i = 0; i < submenu.length; i++) {
   };
 }
 //closing of modals when click on span
-for (let i = 0; i < span.length; i++) {
-  span[i].onclick = function () {
+for (let i = 0; i < spanClose.length; i++) {
+  spanClose[i].onclick = function () {
     let j = i + 1;
     let modal = document.querySelector("#modal" + j);
     modal.style.display = "none";
+
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "block";
     }
@@ -81,3 +87,5 @@ window.onkeydown = function (event) {
   }
   toggleProfil.style.display = "flex";
 };
+
+
