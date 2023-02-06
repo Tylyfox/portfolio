@@ -4,8 +4,8 @@ const menu = document.querySelector(".menu");
 const textAnim1 = document.querySelector("#p1");
 const textAnim2 = document.querySelector("#p2");
 const submenu = document.querySelectorAll(".submenu");
-const span = document.querySelectorAll("span");
-
+const span = document.querySelectorAll(".spanClose");
+console.log(span);
 profilImg.onclick = function () {
   menu.classList.toggle("active");
   profilImg.src = "./img/smiling.png";
