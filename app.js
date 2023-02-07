@@ -7,12 +7,21 @@ const submenu = document.querySelectorAll(".submenu");
 const spanClose = document.querySelectorAll(".spanClose");
 const imgSubmenu = document.querySelectorAll(".imgSubmenu");
 const submenuTitle = document.querySelectorAll(".submenuTitle");
+let imgRandom = ['coeur', 'rawr', 'cat', 'smiling', 'cafe', "biere"];
 
+function RandomPicture(min, max, tab) {
+  let rand = Math.floor(Math.random()* (max -min) + min);
+  console.log(rand);
+  let randomValue = tab[rand];
+  return randomValue;
+}
 
 profilImg.onclick = function () {
   menu.classList.toggle("active");
-  profilImg.src = "./img/smiling.png";
+  let img = "./img/"+RandomPicture(0, imgRandom.length, imgRandom)+".png"
+  profilImg.src = img;
 };
+
 profilImg.addEventListener("mouseover", function (event) {
   event.target.src = "./img/profil2.png";
   new Typewriter(textAnim1, {
@@ -49,11 +58,10 @@ profilImg.addEventListener("mouseout", function (event) {
 //opening of modals
 for (let i = 0; i < submenu.length; i++) {
   submenu[i].onclick = function () {
-    let j = i + 1;
-    let modal = document.querySelector("#modal" + j);
-    modal.style.display = "flex";
+    let modal = document.querySelectorAll(".modal");
+    modal[i].style.display = "flex";
     imgSubmenu[i].style.filter = "grayscale(0%)";
-    submenuTitle[i].style.color = "#b3dee5";
+    submenuTitle[i].style.color = "#ffa101";
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "none";
     }
@@ -63,10 +71,8 @@ for (let i = 0; i < submenu.length; i++) {
 //closing of modals when click on span
 for (let i = 0; i < spanClose.length; i++) {
   spanClose[i].onclick = function () {
-    let j = i + 1;
-    let modal = document.querySelector("#modal" + j);
-    modal.style.display = "none";
-
+    let modal = document.querySelectorAll(".modal");
+    modal[i].style.display = "none";
     for (let h = 0; h < submenu.length; h++) {
       submenu[h].style.display = "block";
     }
@@ -87,5 +93,3 @@ window.onkeydown = function (event) {
   }
   toggleProfil.style.display = "flex";
 };
-
-

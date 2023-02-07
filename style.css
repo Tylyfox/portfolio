@@ -352,7 +352,6 @@ body {
 .menu .submenu:hover span {
     opacity: 1;
     transform: translateY(-70px);
-    color: #ffa101;
 }
 .menu .submenu #span2 {
     transform: rotate(-72deg) translateX(-50px);
